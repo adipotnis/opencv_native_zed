@@ -32,10 +32,13 @@ python zed_opencv_native2.py
 ```
 
 ## 3) depth_still.py
+### Input 
+- Takes zed_mini.yaml as input.
+- Requires Camera calibration .conf files for image rectification.
 
 ### Output
 
-- Displays images of 
+- Displays images of: 
 1. Left camera image
 2. Disparity image
 3. Depth image
