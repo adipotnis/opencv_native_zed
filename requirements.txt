@@ -1,0 +1,8 @@
+cv2 >= 4.5.5
+wget >= 3.2
+numpy >= 1.21.5
+yaml >= 6.0
+matplotlib >= 3.5.1
+os
+sys
+configparser
