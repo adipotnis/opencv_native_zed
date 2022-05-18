@@ -7,14 +7,26 @@ Modified version of opencv native zed
 Contains important parameter values and serial number and config file addresses
 
 ```
+# cam info
 serial_number: 14242888
 config_path: '/Library/code'
+
+# stereo Parameters
 minDisparity: 0
 numDisparities: 128
 blockSize: 35
 speckleRange: 16
 speckleWindowSize: 25
 output_file: output.mp4
+
+# image files (for depth still only)
+left_name: left.png
+right_name: right.png
+
+# Previous values
+#stereoMatcher.setMinDisparity(4)
+#stereoMatcher.setBlockSize(21)
+#stereoMatcher.setSpeckleWindowSize(45)
 ```
 
 ## 2) zed_opencv_native2.py
