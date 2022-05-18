@@ -15,6 +15,14 @@ import wget
 import yaml
 
 def download_calibration_file(serial_number, file_dir) :
+    """
+    Parameters:
+    serial_number: The serial number of the camera being used
+    file_dir: the path of the .conf file
+
+    Returns: Calibration file directory
+    """
+    
     if os.name == 'nt' :
         hidden_path = os.getenv('APPDATA') + '\\Stereolabs\\settings\\'
     else :
@@ -32,7 +40,14 @@ def download_calibration_file(serial_number, file_dir) :
     return calibration_file
 
 def init_calibration(calibration_file, image_size) :
+    """
+    Parameter: 
+    calibration_file:  Calibration file directory
+    image_size: tuple of the image resolution (width, height)
 
+    Return:
+    cameraMatrix_left, cameraMatrix_right, map_left_x, map_left_y, map_right_x, map_right_y for rectification using openCV remap
+    """
     cameraMatrix_left = cameraMatrix_right = map_left_y = map_left_x = map_right_y = map_right_x = np.array([])
 
     config = configparser.ConfigParser()
