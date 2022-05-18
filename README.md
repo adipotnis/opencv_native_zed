@@ -36,15 +36,15 @@ python zed_opencv_native2.py
 ### Output
 
 - Displays images of 
-[1] Left camera image
-[2] Disparity image
-[3] Depth image
-[4] Depth plot in matplotlib
+1. Left camera image
+2. Disparity image
+3. Depth image
+4. Depth plot in matplotlib
 
 - Output files are: 
-[1] left_gray.png
-[2] disparity.png
-[3] depth.png
+1. left_gray.png
+2. disparity.png
+3. depth.png
 - Object distance calculated is shown on console
 ```
 Distance at image centre:  89.91579 cm
