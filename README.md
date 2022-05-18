@@ -44,6 +44,8 @@ python zed_opencv_native2.py
 ```
 
 ## 3) depth_still.py
+Calculates disparity and depth map using stereoSGBM using opencv. Also calculates distance of the a point located at the centre of the image.
+
 ### Input 
 - Takes zed_mini.yaml as input.
 - Requires Camera calibration .conf files for image rectification.
