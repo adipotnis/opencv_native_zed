@@ -1,4 +1,3 @@
----
 # cam info
 serial_number: 14242888
 config_path: '/Library/code'
@@ -14,6 +13,9 @@ output_file: output.mp4
 # image files (for depth still only)
 left_name: left.png
 right_name: right.png
+
+#file save directory for the depth map
+save_dir: "" 
 
 # Previous values
 #stereoMatcher.setMinDisparity(4)

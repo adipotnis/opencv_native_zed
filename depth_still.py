@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import yaml
 from matplotlib import pyplot as plt
+import os
 
 
 def main():
@@ -25,6 +26,9 @@ def main():
             # image_files
             left_name = yaml_dict.get('left_name')
             right_name = yaml_dict.get('right_name')
+
+            # save directory
+            save_dir = yaml_dict.get('save_dir')
 
         except yaml.YAMLError as exc:
             print(exc)
@@ -75,16 +79,15 @@ def main():
 
     center = [int(depth.shape[0]/2), int(depth.shape[1]/2)]
     print('Distance at image centre: ', np.average(depth[center[0],center[1]]), 'cm')
-
+    print()
     # Images of plots
     cv2.imshow('depth', depth/512)
-    cv2.imwrite('depth.png', depth)
+    cv2.imwrite(os.path.join(save_dir,str(serial_number)+ '_'+'depth.png'), depth)
 
     cv2.imshow('left', imgL)
-    cv2.imwrite('left_gray.png', imgL)
 
     cv2.imshow('disparity', disparity)
-    cv2.imwrite('disparity.png', disparity * 1024)
+    cv2.imwrite(os.path.join(save_dir,str(serial_number)+ '_'+'disparity.png' ), disparity * 1024)
 
     plt.title('depth')
 
