@@ -1,11 +1,18 @@
+# cam info
 serial_number: 14242888
 config_path: '/Library/code'
+
+# stereo Parameters
 minDisparity: 0
 numDisparities: 128
 blockSize: 35
 speckleRange: 16
 speckleWindowSize: 25
 output_file: output.mp4
+
+# image files (for depth still only)
+left_name: left.png
+right_name: right.png
 
 # Previous values
 #stereoMatcher.setMinDisparity(4)
